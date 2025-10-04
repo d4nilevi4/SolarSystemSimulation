@@ -15,7 +15,8 @@
         "Entitas.dll",
         "Entitas.CodeGeneration.Attributes.dll",
         "Entitas.VisualDebugging.Unity.dll",
-        "DesperateDevs.Extensions.dll"
+        "DesperateDevs.Extensions.dll",
+        "Newtonsoft.Json.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],
