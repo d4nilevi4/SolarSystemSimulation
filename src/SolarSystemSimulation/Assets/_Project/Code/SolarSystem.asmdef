@@ -1,12 +1,22 @@
 {
     "name": "SolarSystem",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "Zenject-usage.dll",
+        "Entitas.dll",
+        "Entitas.CodeGeneration.Attributes.dll",
+        "Entitas.VisualDebugging.Unity.dll",
+        "DesperateDevs.Extensions.dll"
+    ],
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
