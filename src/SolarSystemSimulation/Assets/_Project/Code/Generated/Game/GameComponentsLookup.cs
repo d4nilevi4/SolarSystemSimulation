@@ -28,10 +28,12 @@ public static class GameComponentsLookup {
     public const int Mass = 17;
     public const int Id = 18;
     public const int PositionOffset = 19;
-    public const int Transform = 20;
-    public const int WorldPosition = 21;
+    public const int SolarSystemObject = 20;
+    public const int SolarSystemObjectTypeId = 21;
+    public const int Transform = 22;
+    public const int WorldPosition = 23;
 
-    public const int TotalComponents = 22;
+    public const int TotalComponents = 24;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -54,6 +56,8 @@ public static class GameComponentsLookup {
         "Mass",
         "Id",
         "PositionOffset",
+        "SolarSystemObject",
+        "SolarSystemObjectTypeId",
         "Transform",
         "WorldPosition"
     };
@@ -79,6 +83,8 @@ public static class GameComponentsLookup {
         typeof(SolarSystem.Gameplay.Gravitation.Mass),
         typeof(SolarSystem.Gameplay.Id),
         typeof(SolarSystem.Gameplay.PositionOffset),
+        typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObject),
+        typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObjectTypeIdComponent),
         typeof(SolarSystem.Gameplay.TransformComponent),
         typeof(SolarSystem.Gameplay.WorldPosition)
     };
