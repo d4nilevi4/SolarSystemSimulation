@@ -23,12 +23,15 @@ public static class GameComponentsLookup {
     public const int AnimationStateEvent = 12;
     public const int AnimationUpdateState = 13;
     public const int Animator = 14;
-    public const int Id = 15;
-    public const int PositionOffset = 16;
-    public const int Transform = 17;
-    public const int WorldPosition = 18;
+    public const int GravitationalAcceleration = 15;
+    public const int GravityAffectable = 16;
+    public const int Mass = 17;
+    public const int Id = 18;
+    public const int PositionOffset = 19;
+    public const int Transform = 20;
+    public const int WorldPosition = 21;
 
-    public const int TotalComponents = 19;
+    public const int TotalComponents = 22;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -46,6 +49,9 @@ public static class GameComponentsLookup {
         "AnimationStateEvent",
         "AnimationUpdateState",
         "Animator",
+        "GravitationalAcceleration",
+        "GravityAffectable",
+        "Mass",
         "Id",
         "PositionOffset",
         "Transform",
@@ -68,6 +74,9 @@ public static class GameComponentsLookup {
         typeof(SolarSystem.Gameplay.Animations.AnimationStateEvent),
         typeof(SolarSystem.Gameplay.Animations.AnimationUpdateState),
         typeof(SolarSystem.Gameplay.Animations.AnimatorComponent),
+        typeof(SolarSystem.Gameplay.Gravitation.GravitationalAcceleration),
+        typeof(SolarSystem.Gameplay.Gravitation.GravityAffectable),
+        typeof(SolarSystem.Gameplay.Gravitation.Mass),
         typeof(SolarSystem.Gameplay.Id),
         typeof(SolarSystem.Gameplay.PositionOffset),
         typeof(SolarSystem.Gameplay.TransformComponent),
