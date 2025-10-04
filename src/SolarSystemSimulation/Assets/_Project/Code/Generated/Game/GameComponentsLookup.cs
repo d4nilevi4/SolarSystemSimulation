@@ -8,15 +8,69 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int Destructed = 0;
+    public const int SelfDestructTimer = 1;
+    public const int View = 2;
+    public const int ViewPath = 3;
+    public const int ViewPrefab = 4;
+    public const int AnimationEndState = 5;
+    public const int AnimationEnterState = 6;
+    public const int AnimationEvent = 7;
+    public const int AnimationEventName = 8;
+    public const int AnimationEventOwnerId = 9;
+    public const int AnimationExitState = 10;
+    public const int AnimationHash = 11;
+    public const int AnimationStateEvent = 12;
+    public const int AnimationUpdateState = 13;
+    public const int Animator = 14;
+    public const int Id = 15;
+    public const int PositionOffset = 16;
+    public const int Transform = 17;
+    public const int WorldPosition = 18;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 19;
 
     public static readonly string[] componentNames = {
-
+        "Destructed",
+        "SelfDestructTimer",
+        "View",
+        "ViewPath",
+        "ViewPrefab",
+        "AnimationEndState",
+        "AnimationEnterState",
+        "AnimationEvent",
+        "AnimationEventName",
+        "AnimationEventOwnerId",
+        "AnimationExitState",
+        "AnimationHash",
+        "AnimationStateEvent",
+        "AnimationUpdateState",
+        "Animator",
+        "Id",
+        "PositionOffset",
+        "Transform",
+        "WorldPosition"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(SolarSystem.Common.Destructed),
+        typeof(SolarSystem.Common.SelfDestructTimer),
+        typeof(SolarSystem.Common.View),
+        typeof(SolarSystem.Common.ViewPath),
+        typeof(SolarSystem.Common.ViewPrefab),
+        typeof(SolarSystem.Gameplay.Animations.AnimationEndState),
+        typeof(SolarSystem.Gameplay.Animations.AnimationEnterState),
+        typeof(SolarSystem.Gameplay.Animations.AnimationEvent),
+        typeof(SolarSystem.Gameplay.Animations.AnimationEventName),
+        typeof(SolarSystem.Gameplay.Animations.AnimationEventOwnerId),
+        typeof(SolarSystem.Gameplay.Animations.AnimationExitState),
+        typeof(SolarSystem.Gameplay.Animations.AnimationHash),
+        typeof(SolarSystem.Gameplay.Animations.AnimationStateEvent),
+        typeof(SolarSystem.Gameplay.Animations.AnimationUpdateState),
+        typeof(SolarSystem.Gameplay.Animations.AnimatorComponent),
+        typeof(SolarSystem.Gameplay.Id),
+        typeof(SolarSystem.Gameplay.PositionOffset),
+        typeof(SolarSystem.Gameplay.TransformComponent),
+        typeof(SolarSystem.Gameplay.WorldPosition)
     };
 }
