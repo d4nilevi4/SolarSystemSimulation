@@ -8,5 +8,6 @@ public sealed class SpaceshipFeature : CustomFeature
     public SpaceshipFeature(ISystemFactory systemFactory)
     {
         Add(systemFactory.Create<SpaceshipMovementFeature>());
+        Add(systemFactory.Create<SpaceshipRotationFeature>());
     }
 }

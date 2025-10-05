@@ -10,7 +10,9 @@ namespace SolarSystem.Gameplay.Spaceship
             Entity
                 .AddAcceleration(10f)
                 .AddWorldPosition(new Vector3(0, 500, 0))
+                .AddWorldRotation(Quaternion.identity)
                 .AddVelocity(Vector3.zero)
+                .AddRotationSpeed(100f)
                 .With(x => x.isSpaceship = true);
         }
 
