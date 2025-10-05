@@ -819,6 +819,7 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 468548639}
+  - {fileID: 1870794693}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1015,6 +1016,7 @@ GameObject:
   - component: {fileID: 1870794691}
   - component: {fileID: 1870794693}
   - component: {fileID: 1870794692}
+  - component: {fileID: 1870794694}
   m_Layer: 0
   m_Name: '[Scene]'
   m_TagString: Untagged
@@ -1062,6 +1064,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213510f696c54ef7903e767510dfac94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: SolarSystem::SolarSystem.Infrastructure.RootInstaller
+--- !u!114 &1870794694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870794690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1f2e3831364696a2c4f0dd0a9d3e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SolarSystem::SolarSystem.Gameplay.Input.SpaceshipInputProviderInstaller
 --- !u!1 &1890573360
 GameObject:
   m_ObjectHideFlags: 0

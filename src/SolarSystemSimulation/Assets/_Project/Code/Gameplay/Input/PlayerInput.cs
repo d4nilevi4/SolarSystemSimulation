@@ -95,54 +95,18 @@ namespace SolarSystem.Gameplay.Input
             ""id"": ""4fac1020-b948-4be8-8f25-039b075fa7fb"",
             ""actions"": [
                 {
-                    ""name"": ""MoveRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""a5fb1991-9ca4-4fb3-9815-19d0b83eace1"",
-                    ""expectedControlType"": """",
+                    ""name"": ""XZMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""e29c149d-7e44-41db-9b69-e42970e4af40"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""MoveLeft"",
+                    ""name"": ""UpDownMovement"",
                     ""type"": ""Button"",
-                    ""id"": ""97c0787c-8297-446e-b449-48f2e8fab9fe"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MoveForward"",
-                    ""type"": ""Button"",
-                    ""id"": ""08b73912-6485-4ff8-9481-2fb34e0935bc"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MoveBackward"",
-                    ""type"": ""Button"",
-                    ""id"": ""03e8e3e4-9d10-4043-96eb-f3116746225a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MoveUp"",
-                    ""type"": ""Button"",
-                    ""id"": ""4bac48f1-90eb-4f99-8015-56ac986eb65d"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""MoveDown"",
-                    ""type"": ""Button"",
-                    ""id"": ""fd48b7d9-25a1-4d18-96ac-736d00ce693c"",
+                    ""id"": ""83b33ef7-0302-4c47-b5a0-3165a617c04b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -151,136 +115,136 @@ namespace SolarSystem.Gameplay.Input
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""0da5237d-96fa-4c69-ad97-73064d17e468"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""name"": ""Keyboard"",
+                    ""id"": ""91a2f056-5ae9-4565-99ff-f1eb4531d4eb"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
+                    ""groups"": """",
+                    ""action"": ""XZMovement"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""fea86b3e-2d68-480f-bd09-0a54fc29d9af"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""MoveRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d32b8600-87a2-4a38-9f27-25c166c89eb5"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""125ab566-3f41-477f-b223-9e9a834ab3da"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""MoveLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""91fe4ef8-5290-4d0f-8d55-c62e639eaa29"",
+                    ""name"": ""up"",
+                    ""id"": ""79b8c93d-e57c-4124-9992-352be3020dfe"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveForward"",
+                    ""action"": ""XZMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""efd1d740-9e31-44cf-ae9c-f17d450ac50c"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""MoveForward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""69c6b208-e40f-413c-86ec-34f5523d9f63"",
+                    ""name"": ""down"",
+                    ""id"": ""e99c8781-ad26-4685-9e72-6f7a65ed3f5c"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveBackward"",
+                    ""action"": ""XZMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2960d98f-cb94-4803-9bca-00b7842359aa"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Mouse&Keyboard"",
+                    ""action"": ""XZMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""9f1385b6-125b-4a99-b61f-8205b5296b98"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""XZMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""f53ca6d9-fd2c-4056-907e-c3fc4cac2fec"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""id"": ""32dbf7de-5102-427c-97ba-d8691ac85565"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
-                    ""action"": ""MoveBackward"",
+                    ""action"": ""XZMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""18e3286c-dcd3-486e-9263-dcffeec4c887"",
+                    ""name"": ""Keyboard"",
+                    ""id"": ""6913cbcc-5fc4-4c1f-9cf4-10cd579f19b4"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpDownMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""0bfe8268-f32e-4000-b7e2-22ec1d5832e6"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Mouse&Keyboard"",
+                    ""action"": ""UpDownMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""edf67cf6-3513-4202-a97b-9e504236f933"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveUp"",
+                    ""action"": ""UpDownMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""7009e0c5-87cb-452e-b32b-f3d562cac226"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""name"": ""Gamepad"",
+                    ""id"": ""da3b8d6d-8009-4413-ba38-afe42f7dadf5"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""MoveUp"",
-                    ""isComposite"": false,
+                    ""groups"": """",
+                    ""action"": ""UpDownMovement"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""625bbd59-1099-45db-8db9-07525534de90"",
-                    ""path"": ""<Keyboard>/alt"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Mouse&Keyboard"",
-                    ""action"": ""MoveDown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""26b468ae-561f-4863-aa09-326547e082ba"",
+                    ""name"": ""negative"",
+                    ""id"": ""0ceb51c9-bfc4-4a7a-839e-b4cb3050659a"",
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""MoveDown"",
+                    ""groups"": """",
+                    ""action"": ""UpDownMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""706e637a-f35f-4fde-8c7f-d44fb84fc364"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpDownMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -317,12 +281,8 @@ namespace SolarSystem.Gameplay.Input
 }");
             // Spaceship
             m_Spaceship = asset.FindActionMap("Spaceship", throwIfNotFound: true);
-            m_Spaceship_MoveRight = m_Spaceship.FindAction("MoveRight", throwIfNotFound: true);
-            m_Spaceship_MoveLeft = m_Spaceship.FindAction("MoveLeft", throwIfNotFound: true);
-            m_Spaceship_MoveForward = m_Spaceship.FindAction("MoveForward", throwIfNotFound: true);
-            m_Spaceship_MoveBackward = m_Spaceship.FindAction("MoveBackward", throwIfNotFound: true);
-            m_Spaceship_MoveUp = m_Spaceship.FindAction("MoveUp", throwIfNotFound: true);
-            m_Spaceship_MoveDown = m_Spaceship.FindAction("MoveDown", throwIfNotFound: true);
+            m_Spaceship_XZMovement = m_Spaceship.FindAction("XZMovement", throwIfNotFound: true);
+            m_Spaceship_UpDownMovement = m_Spaceship.FindAction("UpDownMovement", throwIfNotFound: true);
         }
 
         ~@PlayerInputActionsMap()
@@ -403,12 +363,8 @@ namespace SolarSystem.Gameplay.Input
         // Spaceship
         private readonly InputActionMap m_Spaceship;
         private List<ISpaceshipActions> m_SpaceshipActionsCallbackInterfaces = new List<ISpaceshipActions>();
-        private readonly InputAction m_Spaceship_MoveRight;
-        private readonly InputAction m_Spaceship_MoveLeft;
-        private readonly InputAction m_Spaceship_MoveForward;
-        private readonly InputAction m_Spaceship_MoveBackward;
-        private readonly InputAction m_Spaceship_MoveUp;
-        private readonly InputAction m_Spaceship_MoveDown;
+        private readonly InputAction m_Spaceship_XZMovement;
+        private readonly InputAction m_Spaceship_UpDownMovement;
         /// <summary>
         /// Provides access to input actions defined in input action map "Spaceship".
         /// </summary>
@@ -421,29 +377,13 @@ namespace SolarSystem.Gameplay.Input
             /// </summary>
             public SpaceshipActions(@PlayerInputActionsMap wrapper) { m_Wrapper = wrapper; }
             /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveRight".
+            /// Provides access to the underlying input action "Spaceship/XZMovement".
             /// </summary>
-            public InputAction @MoveRight => m_Wrapper.m_Spaceship_MoveRight;
+            public InputAction @XZMovement => m_Wrapper.m_Spaceship_XZMovement;
             /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveLeft".
+            /// Provides access to the underlying input action "Spaceship/UpDownMovement".
             /// </summary>
-            public InputAction @MoveLeft => m_Wrapper.m_Spaceship_MoveLeft;
-            /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveForward".
-            /// </summary>
-            public InputAction @MoveForward => m_Wrapper.m_Spaceship_MoveForward;
-            /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveBackward".
-            /// </summary>
-            public InputAction @MoveBackward => m_Wrapper.m_Spaceship_MoveBackward;
-            /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveUp".
-            /// </summary>
-            public InputAction @MoveUp => m_Wrapper.m_Spaceship_MoveUp;
-            /// <summary>
-            /// Provides access to the underlying input action "Spaceship/MoveDown".
-            /// </summary>
-            public InputAction @MoveDown => m_Wrapper.m_Spaceship_MoveDown;
+            public InputAction @UpDownMovement => m_Wrapper.m_Spaceship_UpDownMovement;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -470,24 +410,12 @@ namespace SolarSystem.Gameplay.Input
             {
                 if (instance == null || m_Wrapper.m_SpaceshipActionsCallbackInterfaces.Contains(instance)) return;
                 m_Wrapper.m_SpaceshipActionsCallbackInterfaces.Add(instance);
-                @MoveRight.started += instance.OnMoveRight;
-                @MoveRight.performed += instance.OnMoveRight;
-                @MoveRight.canceled += instance.OnMoveRight;
-                @MoveLeft.started += instance.OnMoveLeft;
-                @MoveLeft.performed += instance.OnMoveLeft;
-                @MoveLeft.canceled += instance.OnMoveLeft;
-                @MoveForward.started += instance.OnMoveForward;
-                @MoveForward.performed += instance.OnMoveForward;
-                @MoveForward.canceled += instance.OnMoveForward;
-                @MoveBackward.started += instance.OnMoveBackward;
-                @MoveBackward.performed += instance.OnMoveBackward;
-                @MoveBackward.canceled += instance.OnMoveBackward;
-                @MoveUp.started += instance.OnMoveUp;
-                @MoveUp.performed += instance.OnMoveUp;
-                @MoveUp.canceled += instance.OnMoveUp;
-                @MoveDown.started += instance.OnMoveDown;
-                @MoveDown.performed += instance.OnMoveDown;
-                @MoveDown.canceled += instance.OnMoveDown;
+                @XZMovement.started += instance.OnXZMovement;
+                @XZMovement.performed += instance.OnXZMovement;
+                @XZMovement.canceled += instance.OnXZMovement;
+                @UpDownMovement.started += instance.OnUpDownMovement;
+                @UpDownMovement.performed += instance.OnUpDownMovement;
+                @UpDownMovement.canceled += instance.OnUpDownMovement;
             }
 
             /// <summary>
@@ -499,24 +427,12 @@ namespace SolarSystem.Gameplay.Input
             /// <seealso cref="SpaceshipActions" />
             private void UnregisterCallbacks(ISpaceshipActions instance)
             {
-                @MoveRight.started -= instance.OnMoveRight;
-                @MoveRight.performed -= instance.OnMoveRight;
-                @MoveRight.canceled -= instance.OnMoveRight;
-                @MoveLeft.started -= instance.OnMoveLeft;
-                @MoveLeft.performed -= instance.OnMoveLeft;
-                @MoveLeft.canceled -= instance.OnMoveLeft;
-                @MoveForward.started -= instance.OnMoveForward;
-                @MoveForward.performed -= instance.OnMoveForward;
-                @MoveForward.canceled -= instance.OnMoveForward;
-                @MoveBackward.started -= instance.OnMoveBackward;
-                @MoveBackward.performed -= instance.OnMoveBackward;
-                @MoveBackward.canceled -= instance.OnMoveBackward;
-                @MoveUp.started -= instance.OnMoveUp;
-                @MoveUp.performed -= instance.OnMoveUp;
-                @MoveUp.canceled -= instance.OnMoveUp;
-                @MoveDown.started -= instance.OnMoveDown;
-                @MoveDown.performed -= instance.OnMoveDown;
-                @MoveDown.canceled -= instance.OnMoveDown;
+                @XZMovement.started -= instance.OnXZMovement;
+                @XZMovement.performed -= instance.OnXZMovement;
+                @XZMovement.canceled -= instance.OnXZMovement;
+                @UpDownMovement.started -= instance.OnUpDownMovement;
+                @UpDownMovement.performed -= instance.OnUpDownMovement;
+                @UpDownMovement.canceled -= instance.OnUpDownMovement;
             }
 
             /// <summary>
@@ -584,47 +500,19 @@ namespace SolarSystem.Gameplay.Input
         public interface ISpaceshipActions
         {
             /// <summary>
-            /// Method invoked when associated input action "MoveRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// Method invoked when associated input action "XZMovement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>
             /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveRight(InputAction.CallbackContext context);
+            void OnXZMovement(InputAction.CallbackContext context);
             /// <summary>
-            /// Method invoked when associated input action "MoveLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// Method invoked when associated input action "UpDownMovement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>
             /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveLeft(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "MoveForward" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveForward(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "MoveBackward" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveBackward(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "MoveUp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveUp(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "MoveDown" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnMoveDown(InputAction.CallbackContext context);
+            void OnUpDownMovement(InputAction.CallbackContext context);
         }
     }
 }

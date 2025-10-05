@@ -12,15 +12,19 @@ public static class InputComponentsLookup {
     public const int CameraRelativeInput = 1;
     public const int Input = 2;
     public const int InputAxis = 3;
-    public const int WorldInput = 4;
+    public const int SpaceShipInput = 4;
+    public const int SpaceShipInputAxis = 5;
+    public const int WorldInput = 6;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "CameraRelativeInput",
         "Input",
         "InputAxis",
+        "SpaceShipInput",
+        "SpaceShipInputAxis",
         "WorldInput"
     };
 
@@ -29,6 +33,8 @@ public static class InputComponentsLookup {
         typeof(SolarSystem.Gameplay.Input.CameraRelativeInput),
         typeof(SolarSystem.Gameplay.Input.Input),
         typeof(SolarSystem.Gameplay.Input.InputAxis),
+        typeof(SolarSystem.Gameplay.Input.SpaceShipInput),
+        typeof(SolarSystem.Gameplay.Input.SpaceShipInputAxis),
         typeof(SolarSystem.Gameplay.Input.WorldInput)
     };
 }
