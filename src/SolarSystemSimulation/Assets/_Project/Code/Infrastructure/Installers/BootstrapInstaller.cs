@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using SolarSystem.Common;
 using SolarSystem.Gameplay;
+using SolarSystem.Gameplay.Input;
 using SolarSystem.Gameplay.StaticData;
 
 namespace SolarSystem.Infrastructure
@@ -79,6 +80,7 @@ namespace SolarSystem.Infrastructure
         private void BindGameplayServices()
         {
             Container.Bind<ITimeService>().To<UnityTimeService>().AsSingle();
+            Container.Bind<IMainInputMapProvider>().To<MainInputMapProvider>().AsSingle();
             Container.Bind<IStaticDataProvider>().To<StaticDataProvider>().AsSingle();
         }
 
