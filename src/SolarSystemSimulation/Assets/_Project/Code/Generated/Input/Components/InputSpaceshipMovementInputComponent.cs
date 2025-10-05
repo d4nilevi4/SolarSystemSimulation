@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class InputMatcher {
 
-    static Entitas.IMatcher<InputEntity> _matcherSpaceshipInput;
+    static Entitas.IMatcher<InputEntity> _matcherSpaceshipMovementInput;
 
-    public static Entitas.IMatcher<InputEntity> SpaceshipInput {
+    public static Entitas.IMatcher<InputEntity> SpaceshipMovementInput {
         get {
-            if (_matcherSpaceshipInput == null) {
-                var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.SpaceshipInput);
+            if (_matcherSpaceshipMovementInput == null) {
+                var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.SpaceshipMovementInput);
                 matcher.componentNames = InputComponentsLookup.componentNames;
-                _matcherSpaceshipInput = matcher;
+                _matcherSpaceshipMovementInput = matcher;
             }
 
-            return _matcherSpaceshipInput;
+            return _matcherSpaceshipMovementInput;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class InputMatcher {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly SolarSystem.Gameplay.Input.SpaceshipInput spaceshipInputComponent = new SolarSystem.Gameplay.Input.SpaceshipInput();
+    static readonly SolarSystem.Gameplay.Input.SpaceshipMovementInput spaceshipMovementInputComponent = new SolarSystem.Gameplay.Input.SpaceshipMovementInput();
 
-    public bool isSpaceshipInput {
-        get { return HasComponent(InputComponentsLookup.SpaceshipInput); }
+    public bool isSpaceshipMovementInput {
+        get { return HasComponent(InputComponentsLookup.SpaceshipMovementInput); }
         set {
-            if (value != isSpaceshipInput) {
-                var index = InputComponentsLookup.SpaceshipInput;
+            if (value != isSpaceshipMovementInput) {
+                var index = InputComponentsLookup.SpaceshipMovementInput;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : spaceshipInputComponent;
+                            : spaceshipMovementInputComponent;
 
                     AddComponent(index, component);
                 } else {

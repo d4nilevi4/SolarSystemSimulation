@@ -12,19 +12,25 @@ public static class InputComponentsLookup {
     public const int CameraRelativeInput = 1;
     public const int Input = 2;
     public const int InputAxis = 3;
-    public const int SpaceShipInput = 4;
-    public const int SpaceShipInputAxis = 5;
-    public const int WorldInput = 6;
+    public const int SpaceshipInput = 4;
+    public const int SpaceshipMovementInput = 5;
+    public const int SpaceshipMovementInputAxis = 6;
+    public const int SpaceshipRotationInput = 7;
+    public const int SpaceshipRotationInputAxis = 8;
+    public const int WorldInput = 9;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "CameraRelativeInput",
         "Input",
         "InputAxis",
-        "SpaceShipInput",
-        "SpaceShipInputAxis",
+        "SpaceshipInput",
+        "SpaceshipMovementInput",
+        "SpaceshipMovementInputAxis",
+        "SpaceshipRotationInput",
+        "SpaceshipRotationInputAxis",
         "WorldInput"
     };
 
@@ -33,8 +39,11 @@ public static class InputComponentsLookup {
         typeof(SolarSystem.Gameplay.Input.CameraRelativeInput),
         typeof(SolarSystem.Gameplay.Input.Input),
         typeof(SolarSystem.Gameplay.Input.InputAxis),
-        typeof(SolarSystem.Gameplay.Input.SpaceShipInput),
-        typeof(SolarSystem.Gameplay.Input.SpaceShipInputAxis),
+        typeof(SolarSystem.Gameplay.Input.SpaceshipInput),
+        typeof(SolarSystem.Gameplay.Input.SpaceshipMovementInput),
+        typeof(SolarSystem.Gameplay.Input.SpaceshipMovementInputAxis),
+        typeof(SolarSystem.Gameplay.Input.SpaceshipRotationInput),
+        typeof(SolarSystem.Gameplay.Input.SpaceshipRotationInputAxis),
         typeof(SolarSystem.Gameplay.Input.WorldInput)
     };
 }

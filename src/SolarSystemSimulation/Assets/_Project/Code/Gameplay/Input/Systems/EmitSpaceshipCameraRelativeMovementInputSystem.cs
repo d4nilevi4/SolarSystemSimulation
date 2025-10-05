@@ -2,13 +2,13 @@
 
 namespace SolarSystem.Gameplay.Input;
 
-public sealed class EmitSpaceshipCameraRelativeInputSystem : IExecuteSystem
+public sealed class EmitSpaceshipCameraRelativeMovementInputSystem : IExecuteSystem
 {
     private readonly ISpaceshipInputProvider _spaceshipInputProvider;
     private readonly ICameraProvider _cameraProvider;
     private readonly IGroup<InputEntity> _inputs;
 
-    public EmitSpaceshipCameraRelativeInputSystem(
+    public EmitSpaceshipCameraRelativeMovementInputSystem(
         InputContext input,
         ISpaceshipInputProvider spaceshipInputProvider,
         ICameraProvider cameraProvider)
@@ -18,7 +18,8 @@ public sealed class EmitSpaceshipCameraRelativeInputSystem : IExecuteSystem
         _inputs = input.GetGroup(InputMatcher
             .AllOf(
                 InputMatcher.Input,
-                InputMatcher.SpaceShipInput,
+                InputMatcher.SpaceshipInput,
+                InputMatcher.SpaceshipMovementInput,
                 InputMatcher.CameraRelativeInput));
     }
 
@@ -26,11 +27,11 @@ public sealed class EmitSpaceshipCameraRelativeInputSystem : IExecuteSystem
     {
         foreach (InputEntity input in _inputs)
         {
-            if (_spaceshipInputProvider.HasSpaceshipInput)
-                input.ReplaceSpaceShipInputAxis(
-                    GetCameraRelativeInput(_spaceshipInputProvider.GetSpaceshipInput()));
-            else if (input.hasSpaceShipInputAxis)
-                input.RemoveSpaceShipInputAxis();
+            if (_spaceshipInputProvider.HasSpaceshipMovementInput)
+                input.ReplaceSpaceshipMovementInputAxis(
+                    GetCameraRelativeInput(_spaceshipInputProvider.GetSpaceshipMovementInput()));
+            else if (input.hasSpaceshipMovementInputAxis)
+                input.RemoveSpaceshipMovementInputAxis();
         }
     }
 

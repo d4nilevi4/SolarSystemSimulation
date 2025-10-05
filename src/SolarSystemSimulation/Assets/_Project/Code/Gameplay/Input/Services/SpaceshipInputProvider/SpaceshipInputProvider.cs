@@ -4,7 +4,8 @@ public class SpaceshipInputProvider : ISpaceshipInputProvider
 {
     private readonly IMainInputMapProvider _mainInputMapProvider;
 
-    public bool HasSpaceshipInput => GetSpaceshipInput().sqrMagnitude > 0.1f;
+    public bool HasSpaceshipMovementInput => GetSpaceshipMovementInput().sqrMagnitude > 0.1f;
+    public bool HasSpaceshipRotationInput  => GetSpaceshipRotationInput().sqrMagnitude > 0.1f;
     private PlayerInputActionsMap.SpaceshipActions Actions => _mainInputMapProvider.Map.Spaceship;
 
     public SpaceshipInputProvider(
@@ -20,9 +21,14 @@ public class SpaceshipInputProvider : ISpaceshipInputProvider
     public void Disable() =>
         Actions.Disable();
 
-    public Vector3 GetSpaceshipInput()
+    public Vector3 GetSpaceshipMovementInput()
     {
         Vector2 xzInput = Actions.XZMovement.ReadValue<Vector2>();
         return new Vector3(xzInput.x, Actions.UpDownMovement.ReadValue<float>(), xzInput.y);
+    }
+
+    public Vector2 GetSpaceshipRotationInput()
+    {
+        return Actions.Rotation.ReadValue<Vector2>().normalized;
     }
 }

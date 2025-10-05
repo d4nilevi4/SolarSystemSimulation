@@ -19,8 +19,9 @@ public sealed class CalculateVelocitySystem : IExecuteSystem
                 GameMatcher.Velocity));
         _inputs = input.GetGroup(InputMatcher
             .AllOf(
-                InputMatcher.SpaceShipInput,
-                InputMatcher.SpaceShipInputAxis,
+                InputMatcher.SpaceshipInput,
+                InputMatcher.SpaceshipMovementInput,
+                InputMatcher.SpaceshipMovementInputAxis,
                 InputMatcher.CameraRelativeInput));
     }
 
@@ -30,7 +31,7 @@ public sealed class CalculateVelocitySystem : IExecuteSystem
         foreach (GameEntity spaceship in _spaceships)
         {
             Vector3 deltaVelocity = (spaceship.Acceleration * _timeService.DeltaTime) *
-                                    input.SpaceShipInputAxis;
+                                    input.SpaceshipMovementInputAxis;
             spaceship.ReplaceVelocity(spaceship.Velocity + deltaVelocity);
         }
     }

@@ -20,12 +20,19 @@ public class InitializeSpaceshipInputSystem : IInitializeSystem
 
         CreateInputEntity.Empty()
             .With(x => x.isInput = true)
-            .With(x => x.isSpaceShipInput = true)
+            .With(x => x.isSpaceshipInput = true)
+            .With(x => x.isSpaceshipMovementInput = true)
             .With(x => x.isWorldInput = true);
         
         CreateInputEntity.Empty()
             .With(x => x.isInput = true)
-            .With(x => x.isSpaceShipInput = true)
+            .With(x => x.isSpaceshipInput = true)
+            .With(x => x.isSpaceshipMovementInput = true)
             .With(x => x.isCameraRelativeInput = true);
+        
+        CreateInputEntity.Empty()
+            .With(x => x.isInput = true)
+            .With(x => x.isSpaceshipInput = true)
+            .With(x => x.isSpaceshipRotationInput = true);
     }
 }

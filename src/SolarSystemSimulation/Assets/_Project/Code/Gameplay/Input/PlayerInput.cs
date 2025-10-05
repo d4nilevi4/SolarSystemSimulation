@@ -111,6 +111,15 @@ namespace SolarSystem.Gameplay.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Value"",
+                    ""id"": ""6a6523ea-258e-489c-b113-46f96fcdc7fc"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -245,6 +254,28 @@ namespace SolarSystem.Gameplay.Input
                     ""action"": ""UpDownMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7957c999-1971-48cf-9b95-809482599dc9"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""488132fa-2da3-4814-b311-bca231620876"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Mouse&Keyboard"",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -283,6 +314,7 @@ namespace SolarSystem.Gameplay.Input
             m_Spaceship = asset.FindActionMap("Spaceship", throwIfNotFound: true);
             m_Spaceship_XZMovement = m_Spaceship.FindAction("XZMovement", throwIfNotFound: true);
             m_Spaceship_UpDownMovement = m_Spaceship.FindAction("UpDownMovement", throwIfNotFound: true);
+            m_Spaceship_Rotation = m_Spaceship.FindAction("Rotation", throwIfNotFound: true);
         }
 
         ~@PlayerInputActionsMap()
@@ -365,6 +397,7 @@ namespace SolarSystem.Gameplay.Input
         private List<ISpaceshipActions> m_SpaceshipActionsCallbackInterfaces = new List<ISpaceshipActions>();
         private readonly InputAction m_Spaceship_XZMovement;
         private readonly InputAction m_Spaceship_UpDownMovement;
+        private readonly InputAction m_Spaceship_Rotation;
         /// <summary>
         /// Provides access to input actions defined in input action map "Spaceship".
         /// </summary>
@@ -384,6 +417,10 @@ namespace SolarSystem.Gameplay.Input
             /// Provides access to the underlying input action "Spaceship/UpDownMovement".
             /// </summary>
             public InputAction @UpDownMovement => m_Wrapper.m_Spaceship_UpDownMovement;
+            /// <summary>
+            /// Provides access to the underlying input action "Spaceship/Rotation".
+            /// </summary>
+            public InputAction @Rotation => m_Wrapper.m_Spaceship_Rotation;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -416,6 +453,9 @@ namespace SolarSystem.Gameplay.Input
                 @UpDownMovement.started += instance.OnUpDownMovement;
                 @UpDownMovement.performed += instance.OnUpDownMovement;
                 @UpDownMovement.canceled += instance.OnUpDownMovement;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
             }
 
             /// <summary>
@@ -433,6 +473,9 @@ namespace SolarSystem.Gameplay.Input
                 @UpDownMovement.started -= instance.OnUpDownMovement;
                 @UpDownMovement.performed -= instance.OnUpDownMovement;
                 @UpDownMovement.canceled -= instance.OnUpDownMovement;
+                @Rotation.started -= instance.OnRotation;
+                @Rotation.performed -= instance.OnRotation;
+                @Rotation.canceled -= instance.OnRotation;
             }
 
             /// <summary>
@@ -513,6 +556,13 @@ namespace SolarSystem.Gameplay.Input
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnUpDownMovement(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Rotation" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnRotation(InputAction.CallbackContext context);
         }
     }
 }

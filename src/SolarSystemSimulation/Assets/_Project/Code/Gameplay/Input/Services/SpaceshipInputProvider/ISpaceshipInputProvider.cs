@@ -5,6 +5,9 @@ public interface ISpaceshipInputProvider
     void Enable();
     void Disable();
     
-    bool HasSpaceshipInput { get; }
-    Vector3 GetSpaceshipInput();
+    bool HasSpaceshipMovementInput { get; }
+    bool HasSpaceshipRotationInput { get; }
+    
+    Vector3 GetSpaceshipMovementInput();
+    Vector2 GetSpaceshipRotationInput();
 }
