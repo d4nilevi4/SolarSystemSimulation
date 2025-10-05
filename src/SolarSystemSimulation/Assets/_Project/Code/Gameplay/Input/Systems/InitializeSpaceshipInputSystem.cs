@@ -22,5 +22,10 @@ public class InitializeSpaceshipInputSystem : IInitializeSystem
             .With(x => x.isInput = true)
             .With(x => x.isSpaceShipInput = true)
             .With(x => x.isWorldInput = true);
+        
+        CreateInputEntity.Empty()
+            .With(x => x.isInput = true)
+            .With(x => x.isSpaceShipInput = true)
+            .With(x => x.isCameraRelativeInput = true);
     }
 }
