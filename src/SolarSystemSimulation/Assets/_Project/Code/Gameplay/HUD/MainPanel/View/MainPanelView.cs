@@ -17,11 +17,11 @@ namespace SolarSystem.Gameplay.HUD
         {
             var stringBuilder = new StringBuilder();
             stringBuilder
-                .Append("x: ")
+                .Append("Velocity x: ")
                 .Append($"{velocity.x:F2}\n")
-                .Append("y: ")
+                .Append("Velocity y: ")
                 .Append($"{velocity.y:F2}\n")
-                .Append("z: ")
+                .Append("Velocity z: ")
                 .Append($"{velocity.z:F2}");
             _velocityText.SetText(stringBuilder);
         }

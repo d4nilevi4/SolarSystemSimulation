@@ -9,15 +9,15 @@ public sealed class UpdateMainPanelViewSystem : IExecuteSystem
         _entities = contextParameter.GetGroup(GameMatcher
             .AllOf(
                 GameMatcher.MainPanelView,
-                GameMatcher.Velocity));
+                GameMatcher.CameraRelativeVelocity));
     }
 
     public void Execute()
     {
         foreach (GameEntity entity in _entities)
         {
-            entity.MainPanelView.SetSpeed(entity.Velocity.magnitude);
-            entity.MainPanelView.SetVelocity(entity.Velocity);
+            entity.MainPanelView.SetSpeed(entity.CameraRelativeVelocity.magnitude);
+            entity.MainPanelView.SetVelocity(entity.CameraRelativeVelocity);
         }
     }
 }
