@@ -83,4 +83,7 @@ public static class VectorExtensions
     public static Vector2 XZ2Projection(this Vector3 vec) => new (vec.x, vec.z);
         
     public static Vector2 ToVector2(this Vector3 vec) => new (vec.x, vec.z);
+    
+    public static Vector3 Invert(this Vector3 vec) => vec * -1;
+    public static Vector2 Invert(this Vector2 vec) => vec * -1;
 }
