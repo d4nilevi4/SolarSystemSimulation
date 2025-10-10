@@ -14,6 +14,7 @@ namespace SolarSystem.Gameplay.Spaceship
                 .AddWorldPosition(StartPoint.position)
                 .AddWorldRotation(StartPoint.rotation)
                 .AddVelocity(Vector3.zero)
+                .AddCameraRelativeVelocity(Vector3.zero)
                 .AddRotationSpeed(100f)
                 .With(x => x.isSpaceship = true);
         }

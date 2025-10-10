@@ -33,14 +33,15 @@ public static class GameComponentsLookup {
     public const int SolarSystemObject = 22;
     public const int SolarSystemObjectTypeId = 23;
     public const int Acceleration = 24;
-    public const int RotationSpeed = 25;
-    public const int Spaceship = 26;
-    public const int Velocity = 27;
-    public const int Transform = 28;
-    public const int WorldPosition = 29;
-    public const int WorldRotation = 30;
+    public const int CameraRelativeVelocity = 25;
+    public const int RotationSpeed = 26;
+    public const int Spaceship = 27;
+    public const int Velocity = 28;
+    public const int Transform = 29;
+    public const int WorldPosition = 30;
+    public const int WorldRotation = 31;
 
-    public const int TotalComponents = 31;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -68,6 +69,7 @@ public static class GameComponentsLookup {
         "SolarSystemObject",
         "SolarSystemObjectTypeId",
         "Acceleration",
+        "CameraRelativeVelocity",
         "RotationSpeed",
         "Spaceship",
         "Velocity",
@@ -102,6 +104,7 @@ public static class GameComponentsLookup {
         typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObject),
         typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObjectTypeIdComponent),
         typeof(SolarSystem.Gameplay.Spaceship.Acceleration),
+        typeof(SolarSystem.Gameplay.Spaceship.CameraRelativeVelocity),
         typeof(SolarSystem.Gameplay.Spaceship.RotationSpeed),
         typeof(SolarSystem.Gameplay.Spaceship.Spaceship),
         typeof(SolarSystem.Gameplay.Spaceship.Velocity),
