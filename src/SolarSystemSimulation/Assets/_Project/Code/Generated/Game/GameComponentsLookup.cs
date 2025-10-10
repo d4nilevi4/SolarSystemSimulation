@@ -27,19 +27,20 @@ public static class GameComponentsLookup {
     public const int GravityAffectable = 16;
     public const int Mass = 17;
     public const int DraftIndicatorView = 18;
-    public const int Id = 19;
-    public const int PositionOffset = 20;
-    public const int SolarSystemObject = 21;
-    public const int SolarSystemObjectTypeId = 22;
-    public const int Acceleration = 23;
-    public const int RotationSpeed = 24;
-    public const int Spaceship = 25;
-    public const int Velocity = 26;
-    public const int Transform = 27;
-    public const int WorldPosition = 28;
-    public const int WorldRotation = 29;
+    public const int MainPanelView = 19;
+    public const int Id = 20;
+    public const int PositionOffset = 21;
+    public const int SolarSystemObject = 22;
+    public const int SolarSystemObjectTypeId = 23;
+    public const int Acceleration = 24;
+    public const int RotationSpeed = 25;
+    public const int Spaceship = 26;
+    public const int Velocity = 27;
+    public const int Transform = 28;
+    public const int WorldPosition = 29;
+    public const int WorldRotation = 30;
 
-    public const int TotalComponents = 30;
+    public const int TotalComponents = 31;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -61,6 +62,7 @@ public static class GameComponentsLookup {
         "GravityAffectable",
         "Mass",
         "DraftIndicatorView",
+        "MainPanelView",
         "Id",
         "PositionOffset",
         "SolarSystemObject",
@@ -94,6 +96,7 @@ public static class GameComponentsLookup {
         typeof(SolarSystem.Gameplay.Gravitation.GravityAffectable),
         typeof(SolarSystem.Gameplay.Gravitation.Mass),
         typeof(SolarSystem.Gameplay.HUD.DraftIndicatorViewComponent),
+        typeof(SolarSystem.Gameplay.HUD.MainPanelViewComponent),
         typeof(SolarSystem.Gameplay.Id),
         typeof(SolarSystem.Gameplay.PositionOffset),
         typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObject),

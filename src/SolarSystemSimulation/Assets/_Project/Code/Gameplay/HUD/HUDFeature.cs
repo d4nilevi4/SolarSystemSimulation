@@ -8,5 +8,6 @@ public sealed class HUDFeature : CustomFeature
     public HUDFeature(ISystemFactory systemFactory)
     {
         Add(systemFactory.Create<UpdateDraftIndicatorViewSystem>());
+        Add(systemFactory.Create<UpdateMainPanelViewSystem>());
     }
 }
