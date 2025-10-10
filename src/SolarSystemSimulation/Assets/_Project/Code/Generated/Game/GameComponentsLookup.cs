@@ -26,19 +26,20 @@ public static class GameComponentsLookup {
     public const int GravitationalAcceleration = 15;
     public const int GravityAffectable = 16;
     public const int Mass = 17;
-    public const int Id = 18;
-    public const int PositionOffset = 19;
-    public const int SolarSystemObject = 20;
-    public const int SolarSystemObjectTypeId = 21;
-    public const int Acceleration = 22;
-    public const int RotationSpeed = 23;
-    public const int Spaceship = 24;
-    public const int Velocity = 25;
-    public const int Transform = 26;
-    public const int WorldPosition = 27;
-    public const int WorldRotation = 28;
+    public const int DraftIndicatorView = 18;
+    public const int Id = 19;
+    public const int PositionOffset = 20;
+    public const int SolarSystemObject = 21;
+    public const int SolarSystemObjectTypeId = 22;
+    public const int Acceleration = 23;
+    public const int RotationSpeed = 24;
+    public const int Spaceship = 25;
+    public const int Velocity = 26;
+    public const int Transform = 27;
+    public const int WorldPosition = 28;
+    public const int WorldRotation = 29;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -59,6 +60,7 @@ public static class GameComponentsLookup {
         "GravitationalAcceleration",
         "GravityAffectable",
         "Mass",
+        "DraftIndicatorView",
         "Id",
         "PositionOffset",
         "SolarSystemObject",
@@ -91,6 +93,7 @@ public static class GameComponentsLookup {
         typeof(SolarSystem.Gameplay.Gravitation.GravitationalAcceleration),
         typeof(SolarSystem.Gameplay.Gravitation.GravityAffectable),
         typeof(SolarSystem.Gameplay.Gravitation.Mass),
+        typeof(SolarSystem.Gameplay.HUD.DraftIndicatorViewComponent),
         typeof(SolarSystem.Gameplay.Id),
         typeof(SolarSystem.Gameplay.PositionOffset),
         typeof(SolarSystem.Gameplay.SolarSystem.SolarSystemObject),
